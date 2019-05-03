@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7267600267110916229}
   - component: {fileID: 7267600267110916230}
   - component: {fileID: 7267600267110916231}
-  m_Layer: 0
+  - component: {fileID: 8956497383629699736}
+  m_Layer: 9
   m_Name: BigDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,6 +110,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d0de57f619460f45a02b173a2994be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &8956497383629699736
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7267600267110916219}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 10
+  m_AngularDrag: Infinity
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!1 &7267600268685940850
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7267600268685940849}
   - component: {fileID: 7267600268685940848}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Big_Dog_Muddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
