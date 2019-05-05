@@ -22,18 +22,22 @@ public class PlayerShooting : MonoBehaviour
 
     private void UpdateHoseLevel()
     {
+        ParticleSystem.MainModule mainModule = hoseParticles.main;
+        ParticleSystem.EmissionModule emissionModule = hoseParticles.emission;
+        ParticleSystem.CollisionModule collisionModule = hoseParticles.collision;
+
         if (Input.GetButton("Fire1"))
         {
-            // increase speed and rate of hose particles
-            hoseParticles.startSpeed = 60;
-            ParticleSystem.EmissionModule emission = hoseParticles.emission;
-            emission.rateOverTime = 300;
+            // increase speed and rate of hose particles and enable collisions
+            mainModule.startSpeed = 60;
+            emissionModule.rateOverTime = 300;
+            collisionModule.enabled = true;
         } else
         {
             // decrease speed and rate of hose particles
-            hoseParticles.startSpeed = 3;
-            ParticleSystem.EmissionModule emission = hoseParticles.emission;
-            emission.rateOverTime = 20;
+            mainModule.startSpeed = 3;
+            emissionModule.rateOverTime = 20;
+            collisionModule.enabled = false;
         }
     }
 }

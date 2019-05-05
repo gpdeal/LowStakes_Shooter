@@ -602,6 +602,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1259038551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4235121963893757769, guid: 4a7603dbf6c91684baeadf5d212e689f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6821341892728117735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1259038552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259038551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8865a6d0b2a82a428315338eb0c3e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 0}
+  appliedTorque: 100000
 --- !u!1 &1359970473
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +784,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476103591}
   m_LocalRotation: {x: 0.36173493, y: -0, z: -0, w: 0.932281}
-  m_LocalPosition: {x: 0, y: 20.18, z: -88.32}
+  m_LocalPosition: {x: 7.1099997, y: 20.18, z: -70.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1028,7 +1048,7 @@ PrefabInstance:
     - target: {fileID: 5103080171842076666, guid: ee31f895eebeae546be104d4b2d881d3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.7
       objectReference: {fileID: 0}
     - target: {fileID: 5103080171842076666, guid: ee31f895eebeae546be104d4b2d881d3,
         type: 3}
@@ -1038,7 +1058,7 @@ PrefabInstance:
     - target: {fileID: 5103080171842076666, guid: ee31f895eebeae546be104d4b2d881d3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -70.41
+      value: -43.1
       objectReference: {fileID: 0}
     - target: {fileID: 5103080171842076666, guid: ee31f895eebeae546be104d4b2d881d3,
         type: 3}
@@ -1148,6 +1168,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164382092891242869, guid: 4a7603dbf6c91684baeadf5d212e689f,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a7603dbf6c91684baeadf5d212e689f, type: 3}

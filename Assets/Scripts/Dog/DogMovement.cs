@@ -5,6 +5,8 @@ using UnityEngine;
 public class DogMovement : MonoBehaviour
 {
 
+    public float maxAngularVelocity = 50f;
+
     private Transform player;
     //private PlayerHealth playerHealth;
     //private EnemyHealth enemyHealth;
@@ -15,6 +17,8 @@ public class DogMovement : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        Rigidbody rigidbody = GetComponent<Rigidbody>();
+        rigidbody.maxAngularVelocity = maxAngularVelocity;
     }
 
     // Update is called once per frame
