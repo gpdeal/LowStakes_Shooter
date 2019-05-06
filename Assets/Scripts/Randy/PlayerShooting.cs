@@ -5,13 +5,11 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
     private ParticleSystem hoseParticles;
-    private bool firing;
 
     // Start is called before the first frame update
     void Start()
     {
         hoseParticles = GetComponentInChildren<ParticleSystem>();
-        firing = false;
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class HoseParticleStrike : MonoBehaviour
     public ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;
     public float appliedTorque;
-    
+    public float cleaningAmount = 5;
     
     // Start is called before the first frame update
     void Start()
@@ -25,17 +25,16 @@ public class HoseParticleStrike : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        //int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
-
-        Rigidbody otherRb = other.GetComponent<Rigidbody>();
-        Vector3 torqueVec = new Vector3(0, appliedTorque, 0);
-
-        //for (int i = 0; i < numCollisionEvents; i++)
-        //{
-        //if (otherRb)
-        //{
-                otherRb.AddTorque(torqueVec, ForceMode.VelocityChange);
-            //}
-        //}
+        if (other.tag.Equals("Enemy"))
+        {
+            Rigidbody otherRb = other.GetComponent<Rigidbody>();
+            Vector3 torqueVec = new Vector3(0, appliedTorque, 0);
+            otherRb.AddTorque(torqueVec, ForceMode.VelocityChange);
+            DogHealth dogHealth = other.GetComponent<DogHealth>();
+            if (dogHealth) 
+            {
+                dogHealth.Clean(cleaningAmount);
+            }
+        }
     }
 }
